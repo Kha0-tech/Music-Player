@@ -101,6 +101,8 @@ forward.addEventListener('click',() => {
     if(musicPlayingIndex > songsAray.length -1){
         musicPlayingIndex = 0;
     }
+    isPlaying = true;
+    updatePlayAndPause();
     songPlaying(musicPlayingIndex);
 })
 
@@ -110,6 +112,8 @@ backward.addEventListener('click',() => {
     if(musicPlayingIndex === -1){
         musicPlayingIndex = songsAray.length -1;
     }
+    isPlaying = true;
+    updatePlayAndPause();
     songPlaying(musicPlayingIndex);
     
 })
